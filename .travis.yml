@@ -1,17 +1,19 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
 dist: trusty
-
 addons:
   chrome: stable
-
 cache:
   directories:
-    - $HOME/.npm
-
+  - "$HOME/.npm"
 before_install:
-  - npm config set spin false
+- npm config set spin false
+deploy:
+  provider: heroku
+  api_key:
+    secure: PlsA0iFCrnlMhxFKDuBd4E7+DSYMIhCflzt97Fvq3O1M6v2BDTxUXsG5XIl8LxZtxUqAAAF20uHcIcsPZaaJ34kCDweKWQQJK/JRZ+cMBJUpFVkuTB1s9vzJI3yp3SzbYKBbffusYmHcOm6zsAaA69Xe6qmOc3YyyULiJKThXle1GWFYGIYLK7igSY9jiSu4cNn+uMh4oOBjaaIoO1UeoW4355RrrK4eNjsGClWUXbBvJP+4zRs3OZm8gaKWuv8AXAuROKBUj5PARJmcrmH5vP0WGbV1WfTG6zZCKRCMVvyWlnE03f/prIJMrNL4dShUU3oIyZyRYlqXbcTDexuXj5oq07XO/3VcHF/M+6PCNO3YruHhbOluvaNVOjSLMGABDzPYTHgRoQvhmUXKJcUxX04pE3cqQn4R0AttHemR2javPXFCquuwLSY47WDgm0FPLVBfVaoveNmM2kYsMG25+kiGfI3+lkeTNYyK+rY2IdH09yu2+VIJSUT09QXVnE2OQbbdb+uI45jFVjZ3+e83QQKe6T9ZZ9uWN9AA8Y5uGkxDbZS6GSQzrm4TKw6wyzR7B18k4KnaXiQD2/Kd0Ww8ZanqnYkA85kNP6m9soWQ3kRhu0j/t8o0HsxzqcZo7alEfxMB5wzV79GzQ+JDyEKGdZBcn9nQz7msiyhN/DKZ83E=
+  app: gph-ui
+  on:
+    repo: kyle-rader/gph-ui
