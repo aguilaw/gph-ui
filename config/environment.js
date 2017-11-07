@@ -30,6 +30,11 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'connect-src': "*"
     },
+
+    'ember-simple-auth': {
+      routeAfterAuthentication: 'dashboard',
+      routeIfAlreadyAuthenticated: 'dashboard',
+    },
   };
 
   if (environment === 'development') {
