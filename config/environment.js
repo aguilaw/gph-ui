@@ -24,7 +24,7 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: ['greatpuzzlehunt.com', 'www.greatpuzzlehunt.com', /^localhost:\d+$/]
+      hostWhitelist: ['gph-ui.herokuapp.com', 'greatpuzzlehunt.com', 'www.greatpuzzlehunt.com', /^localhost:\d+$/]
     },
 
     contentSecurityPolicy: {
