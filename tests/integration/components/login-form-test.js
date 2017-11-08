@@ -2,7 +2,7 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('login-form', 'Integration | Component | login form', {
-  integration: true
+  integration: true,
 });
 
 test('it renders', function(assert) {
@@ -11,14 +11,12 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{login-form}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$('form button').text().trim(), 'Login');
 
   // Template block usage:
-  this.render(hbs`
-    {{#login-form}}
-      template block text
-    {{/login-form}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  // this.render(hbs`
+  //   {{#login-form}}
+  //     template block text
+  //   {{/login-form}}
+  // `);
 });
