@@ -1,6 +1,8 @@
 /* eslint-env node */
 'use strict';
 
+const API_URL = process.env.API_URL || 'http://localhost:3000';
+
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'gph-ui',
@@ -34,6 +36,11 @@ module.exports = function(environment) {
     'ember-simple-auth': {
       routeAfterAuthentication: 'dashboard',
       routeIfAlreadyAuthenticated: 'dashboard',
+      serverTokenEndpoint: API_URL + "/users/sign_in",
+    },
+
+    DS: {
+     host: API_URL,
     },
   };
 
@@ -57,7 +64,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.DS.host = 'https://gph-api.herokuapp.com'
   }
 
   return ENV;
