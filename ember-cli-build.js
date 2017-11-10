@@ -8,6 +8,9 @@ module.exports = function(defaults) {
     'ember-cli-babel': {
       includePolyfill: true,
     },
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
