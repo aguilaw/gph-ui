@@ -8,6 +8,7 @@ module.exports = function(environment) {
     modulePrefix: 'gph-ui',
     environment,
     rootURL: '/',
+    baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -19,7 +20,9 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
